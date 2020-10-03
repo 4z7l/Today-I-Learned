@@ -9,6 +9,21 @@
 - [4-2 고차함수와 람다식의 이해](#4-2-고차함수와-람다식의-이해)
 - [4-3 다양한 함수의 출격](#4-3-다양한-함수의-출격)
 - [4-4 함수와 변수의 범위(Scope)](#4-4-함수와-변수의-범위scope)
+- [5-1 조건문을 통한 분기]()
+- [5-2 반복문으로 여러번!]()
+- [5-3 흐름의 중단과 반환]()
+- [5-4 예외가 발생했어요!]()
+- [6-1 준비운동! 람다식과 고차함수 요약]()
+- [6-2 널 포획해야겠어! 클로저(Closure)]()
+- [6-3 너 한일은 결과와 함께 반환해. 알았지? - let()]()
+- [6-4 너 할일해. 난 그냥 반환할께. 올쏘! - also()]()
+- [6-5 널 확장 시켜놓고 난 반환한다. - apply()]()
+- [6-6 그냥 실행하고 결과를 반환 - run()]()
+- [6-7 난 단독으로 실행되 반환하는 녀석이지 - with()]()
+- [6-8 사용했으면 닫어! 쫌! - use()]()
+- [6-9 자주 사용되는 기타 표준 함수 (람다식검사, 시간측정, 난수 생성)]()
+
+
 
 <br>
 
@@ -390,3 +405,340 @@ tailrec fun factorial(n: Int, run: Int = 1): Long {
 ### 지역 변수
 - 특정 코드 블록 내에서만 사용
 - 스택 메모리 사용
+
+
+<br>
+
+## 5-1 조건문을 통한 분기
+
+### 범위 연산자
+- `변수명 in 시작값..마지막값`
+- `if(score>=80 && score<=89.9)` -> `score in 80..89.9`  로 바꾸기 가능!
+
+### when
+- `break` 사용하지 않아도 됨
+```kotlin
+when (x) {
+    1 -> print("x == 1")
+    2 -> print("x == 2")
+    else -> { // 블록 구문 사용 가능
+        print("x는 1, 2가 아닙니다.")
+    }
+}
+```
+
+- `in`과 `is` 키워드 사용 가능
+```kotlin
+when (x) {
+	in 1..10 -> println("1이상 10이하")
+	!in 10..20 -> println("10이상 20이하에 포함되지 않음")
+	else -> println("")
+}
+```
+
+```kotlin
+val result = when(str) {
+	is String -> "문자열입니다"
+}
+```
+
+
+<br>
+
+## 5-2 반복문으로 여러번!
+
+### for
+- 하행 반복 : `for (i in 5 downTo 1) print(i)`
+- 필요한 단계 증가 : `for(i in 1..5 step 2) print(i)`
+- 혼합 사용 : `for (i in 5 downTo 1 step 2) print(i)`
+
+
+<br>
+
+## 5-3 흐름의 중단과 반환
+
+### 람다식에서 라벨을 이용한 return
+
+```kotlin
+fun inlineLambda(a: Int, b: Int, out: (Int, Int) -> Unit) { // inline이 제거됨
+    out(a, b)
+}
+
+fun retFunc() {
+    println("start of retFunc")
+    inlineLambda(13, 3) lit@{ a, b ->  // ① 람다식 블록의 시작 부분에 라벨을 지정함
+        val result = a + b
+        if(result > 10) return@lit // ② 라벨을 사용한 블록의 끝부분으로 반환
+        println("result: $result")
+    } // ③ 이 부분으로 빠져나간다
+    println("end of retFunc") //  ④ 이 부분이 실행됨 
+}
+```
+
+<br>
+
+## 5-4 예외가 발생했어요!
+
+```kotlin
+try {
+    예외 발생 가능성 있는 문장
+} catch (e: 예외처리 클래스명) {
+    예외를 처리하기 위한 문장
+} finally {
+   반드시 실행되어야 하는 문장
+}
+```
+
+<br>
+
+## 6-1 준비운동! 람다식과 고차함수 요약
+```kotlin
+fun inc(x: Int): Int {
+    return x + 1
+}
+
+fun high(name: String, body: (Int)->Int): Int {
+    println("name: $name")
+    val x = 0
+    return body(x)
+}
+```
+
+```kotlin
+// 함수를 이용한 람다식
+val result = high("Sean", {  x -> inc(x + 3) })
+
+// 소괄호 바깥으로 빼내고 생략
+val result2 = high("Sean") { inc(it + 3) }
+
+// 매개변수 없이 함수의 이름만 사용할 때
+val result3 = high("Kim", ::inc)
+
+// 람다식 자체를 넘겨 준 형태
+val result4 = high("Sean") { x -> x + 3 }
+
+// 매개변수가 한 개인 경우 생략
+val result5 = high("Sean") { it + 3 }
+```
+
+<br>
+
+## 6-2 널 포획해야겠어! 클로저(Closure)
+
+### Closure
+- 람다식으로 표현된 내부 함수에서 외부 범위에 선언된 변수에 접근할 수 있는 개념
+- 람다식 안에 있는 외부 변수는 람다가 capture(포획)한 변수
+
+```kotlin
+fun main() {
+
+    val calc = Calc()
+    var result = 0 // 외부의 변수
+    calc.addNum(2,3) { x, y -> result = x + y }  // 클로저
+    println(result) // 값을 유지하여 5가 출력
+}
+
+class Calc {
+    fun addNum(a: Int, b: Int, add: (Int, Int) -> Unit) { // 람다식 add에는 반환값이 없음
+        add(a, b)
+    }
+}
+```
+
+<br>
+
+## 6-3 너 한일은 결과와 함께 반환해. 알았지? - let()
+
+### 코틀린 제공 표준 라이브러리 함수
+- `let()`, `apply()`, `with()`, `also()`, `run()`
+
+|함수명|람다식 접근 방법|반환 방법|
+|:--:|:--:|:--:|
+|T.let|it|block 결과|
+|T.also|it|T caller(it)|
+|T.apply|this|T caller(this)|
+|T.run / run|this|block 결과|
+|with|this|Unit|
+
+
+```kotlin
+public inline fun <T, R> T.let(block: (T) -> R): R { ... return block(this) }
+
+public inline fun <T> T.also(block: (T) -> Unit): T { block(this); return this }
+
+public inline fun <T> T.apply(block: T.() -> Unit): T { block(); return this }
+
+public inline fun <R> run(block: () -> R): R  = return block()
+public inline fun <T, R> T.run(block: T.() -> R): R = return block()
+
+public inline fun <T, R> with(receiver: T, block: T.() -> R): R  = receiver.block()
+
+public inline fun <T : Closeable?, R> T.use(block: (T) -> R): R 
+
+```
+
+
+### let()
+- inline 함수
+- 함수를 호출하는 객체를 다음에 오는 block의 인자로 넘기고 특정 결과값을 반환
+- 다른 메소드를 실행하거나 연산을 수행해야 하는 경우 사용
+
+<br>
+
+- let을 사용해 null 검사 대체 가능
+```kotlin
+    val score: Int? = 32
+...
+    // let을 사용해 null 검사를 제거
+    fun checkScoreLet() {
+        score?.let { println("Score: $it") } // ①
+        val str = score.let { it.toString() } // ②
+        println(str)
+    }
+```
+
+<br>
+
+- chaining
+```kotlin
+var a = 1
+var b = 2
+
+a = a.let { it + 2 }.let {
+    val i = it + b
+    i  // 마지막 식 반환
+}
+```
+
+<br>
+
+## 6-4 너 할일해. 난 그냥 반환할께. 올쏘! - also()
+
+### also()
+- also()를 호출하는 객체 T를 다음에오는 block에 전달하고 객체 T 자체를 반환
+
+```kotlin
+var m = 1
+m = m.also { it + 3 }
+println(m) // 출력 : 1
+```
+
+
+### let()과 also() 차이
+
+- let()
+```kotlin
+val person = Person("Kildong", "Kotlin")
+
+val a = person.let {
+	it.skills = "Java"
+	"Success"
+}
+
+println("a is $a")	// "a is Success"
+println("person is $person") // "person is Person(name=Kildong, skills=Java)"
+```
+
+- also()
+```kotlin
+val person = Person("Kildong", "Kotlin")
+
+val a = person.also {
+	it.skills = "Java"
+	"Success"
+}
+
+println("a is $a")	// "a is Person(name=Kildong, skills=Java)"
+println("person is $person") // "person is Person(name=Kildong, skills=Java)"
+```
+
+<br>
+
+## 6-5 널 확장 시켜놓고 난 반환한다. - apply()
+
+### apply()
+- also()와 비슷
+- apply()를 호출한 객체 T를 다음에 오는 block에 전달하고 객체 자체 this를 반환
+
+```kotlin
+var person = Person("Kildong", "Kotlin")
+
+    person.apply { this.skills = "Swift" }
+    println(person)	// 출력 : "Person(name=Kildong, skills=Swift)
+
+    val retrunObj = person.apply { 
+        name = "Sean"
+        skills = "Java"
+    }
+    println(person)	// 출력 : "Person(name=Sean, skills=Java)
+    println(retrunObj)	// 출력 : "Person(name=Sean, skills=Java)
+```
+
+<br>
+
+## 6-6 그냥 실행하고 결과를 반환 - run()
+
+### run()
+- 두 가지 형태 존재
+- 익명 함수처럼 단독 사용 or 확장 함수처럼 호출
+
+### apply()와 run() 비교
+
+```kotlin
+var person = Person("Kildong", "Kotlin")
+
+val returnObj1 = person.apply{
+	this.name = "Sean"
+	this.skills = "Java"
+	"Success"
+}
+println(person)						// 출력 : "Person(name=Seam, skills=Java)"
+prinln("returnObj1 : $returnObj1")	// 출력 : "returnObj1 : Person(name=Seam, skills=Java)"
+
+val returnObj2 = person.run {
+	this.name = "Dooly"
+	this.skills = "C#"
+	"Success"
+}
+println(person)					// 출력 : "Success"
+println("returnObj2 : $returnObj2")	// 출력 : "returnObj2 : Person(name=Dooly, skills=C#)"
+
+```
+
+<br>
+
+## 6-7 난 단독으로 실행돼 반환하는 녀석이지 - with()
+
+### with()
+- 인자로 받는 객체를 다음에 오는 block의 receiver로 전달하여 결과값 반환
+- `run()`의 경우 receiver가 없지만 `with()`는 receiver가 있음
+
+```kotlin
+val user = User("Kildong", "default")
+
+val result = with (user) {
+	skills = "Kotlin"
+	email = "kildong@example.com"
+}
+println(user)		//출력 : "User(name=Kildong, skills=Kotlin, email=kildong@example.com)
+println("result : $result")		//출력 : result : kotlin.Unit
+
+```
+
+<br>
+
+## 6-8 사용했으면 닫어! 쫌! - use()
+
+### use()
+- 객체를 사용한 후 닫아야 하는 경우 -> `use()`를 사용하면 `close()`를 자동으로 호출해 닫아줌
+
+```kotlin
+fun main() {
+
+    PrintWriter(FileOutputStream("d:\\test\\output.txt")).use {
+        it.println("hello")
+    }
+}
+```
+
+
