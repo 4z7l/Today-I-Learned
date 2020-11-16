@@ -221,8 +221,9 @@ RxTextView.textChanges(searchTextView)
 	.subscribe(/* attach observer */);
 ```
 
-
-
+## Room에서 비동기처리할때 반환값
+![image](https://miro.medium.com/max/875/0*jEnmX0FZOBDdJIHK)
+https://medium.com/androiddevelopers/room-flow-273acffe5b57
 
 
 
