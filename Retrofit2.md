@@ -1,7 +1,18 @@
 
 ## Error : CLEARTEXT communication to XXXX not permitted by network security policy
 - Base Url 에 **https**가 아닌 http를 쓰면 `CLEARTEXT communication to XXXX not permitted by network security policy` 오류가 난다.
+- **해결방법 1** : BASE URL을 http -> https로 바꿈
+- **해결방법 2** : Manifest에 `usesCleartextTraffic` 속성을 true로 설정
+```xml
+<application
+   ...
+   android:usesCleartextTraffic="true">
+```
+> :bookmark: __REFERENCE__<br>
+https://gun0912.tistory.com/80
 
+
+<br>
 
 ## Path
  
