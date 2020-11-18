@@ -2,6 +2,7 @@
 
 ## Kotlin
 - [Kotlin](https://github.com/4z7l/Today-I-Learned/blob/master/kotlin.md)
+- [Kotlin Delegates](https://github.com/4z7l/Today-I-Learned/blob/master/kotlin-by.md)
 
 ## Android
 - [Coroutine](https://github.com/4z7l/Today-I-Learned/blob/master/Coroutine.md)
