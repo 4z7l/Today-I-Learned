@@ -23,3 +23,15 @@
 3. 네트워크 사용
 
 ### 메인스레드와 작업스레드를 분리해야한다!!
+
+
+
+## 3. multi threading
+
+- 쓰레드의 **생성 및 컨텍스트 스위칭**은 프로세스의 생성 및 컨텍스트 스위칭보다 빠르다.
+
+![img](https://goodgid.github.io/assets/img/os/what_is_multi_thread_1.png)
+
+
+
+> https://goodgid.github.io/What-is-Multi-Thread/
