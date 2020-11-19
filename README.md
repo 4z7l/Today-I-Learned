@@ -1,5 +1,10 @@
 # Today-I-Learned
 
+
+## Java
+- [Java-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/Java-Thread.md)
+
+
 ## Kotlin
 - [Kotlin](https://github.com/4z7l/Today-I-Learned/blob/master/kotlin.md)
 - [Kotlin Delegates](https://github.com/4z7l/Today-I-Learned/blob/master/kotlin-by.md)
@@ -9,5 +14,4 @@
 - [Retrofit2](https://github.com/4z7l/Today-I-Learned/blob/master/Retrofit2.md)
 - [Rx](https://github.com/4z7l/Today-I-Learned/blob/master/Rx.md)
 - [DI](https://github.com/4z7l/Today-I-Learned/blob/master/di.md)
-- [Thread](https://github.com/4z7l/Today-I-Learned/blob/master/thread.md)
-
+- [Android-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/thread.md)
