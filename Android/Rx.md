@@ -21,7 +21,7 @@
 - 사용자에게 즉각적으로 반응
 - 이를 위해선 시스템이 __메시지 구동 방식__ 이어야함
 #### 2. Resilient (탄력성)
-- 일반적인 상황뿐만 아니라 장애 등의 상황에서도 응답성을 보장해야함 
+- 일반적인 상황뿐만 아니라 장애 등의 상황에서도 응답성을 보장해야함
 #### 3. Elastic
 - 탄력성과 유연성은 함께 작용함 -> 응답성 보장
 #### 4. Message-driven
@@ -41,6 +41,14 @@
 - RxBinding : 안드로이드 UI 위젯용 RxJava 바인딩 API
 - RxPermissions : RxJava에서 제공하는 안드로이드 런타임 권한 라이브러리
 
+2. RxJava
+- Rx의 자바 버전, 비동기 data stream 생성 가능
+- 아무 thread에서 비동기 data stream 생성 가능, 아무 thread에서 observer가 data 소비 가능
+
+3. RxKotlin
+- Rx의 코틀린 버전
+- Rxjava를 코틀린으로 사용할 수 있음
+
 
 ## 구성요소
 
@@ -54,9 +62,9 @@
 	+ `onNext` : 새로운 데이터 전달
 	+ `onCompleted` : 스트림 종료, 더이상 이벤트 보낼 수 없음
 	+ `onError` : 에러 신호 전달
-	
+
 <br>
-	
+
 ### Observable의 종류?!
 -   `Observable` : 최상위 기본타입.
 -   `Single` : 1개의 데이터만 반환
@@ -70,7 +78,7 @@
 
 - `filter` : 특정 이벤트일 때만 행동 (ex. 문자열이 있을때만 true)
 > ```
-> Observable.just(query)  .filter(text  ->  !TextUtils.isEmpty(text)) 
+> Observable.just(query)  .filter(text  ->  !TextUtils.isEmpty(text))
 > ```
 
 - `map` : 입력으로 들어 오는 값을 변경 할 수 있다
@@ -87,7 +95,7 @@
 - `merge()` : 2개 이상의 Observable을 한번에 방출, __단,__ 먼저 오면 먼저 방출
 
 - `switchMap()` : 순서 보장하지만 중간에 다른거 발행되면 그걸로 처리함
- 
+
 
 # RxJava
 
@@ -159,11 +167,11 @@ Observable
 - 그냥 view에서는 `click` , textview에서는 `textChanges` 쓰는듯??
 
 ```kotlin
-fun processTextWatcher(tv: TextView) { 
-	val observable = tv.textChanges() 
-	observable.subscribe { 
-		charSequcne -> Toast.makeText(context, charSequcne.toString(), Toast.LENGTH_SHORT) 
-	} 
+fun processTextWatcher(tv: TextView) {
+	val observable = tv.textChanges()
+	observable.subscribe {
+		charSequcne -> Toast.makeText(context, charSequcne.toString(), Toast.LENGTH_SHORT)
+	}
 }
 ```
 
@@ -188,7 +196,7 @@ Subscription buttonSub = RxView.clicks(button).subscribe(new Action1<Void>() {
    public void call(Void aVoid) {
       //handle on click here
    }
-}); 
+});
 
 ```
 
@@ -237,5 +245,3 @@ https://medium.com/androiddevelopers/room-flow-273acffe5b57
 > https://medium.com/@jang.wangsu/rxswift-rxswift%EB%9E%80-reactivex-%EB%9E%80-b21f75e34c10<br>
 > https://ojh102.tistory.com/1<br>
 > https://guides.codepath.com/android/RxJava-and-RxBinding<br>
-
-

@@ -21,6 +21,11 @@
 (3) 취소 시 실행중인 코루틴 계층에서 자동으로 전파됨
 
 
+## Component
+
+
+
+
 
 ## 관련 용어
 
@@ -38,7 +43,7 @@
 | `Dispatcher.Default` | CPU 사용량이 많은 작업      |
 | -------------------- | --------------------------- |
 | `Dispatcher.IO`      | 네트워크, 디스크 사용 작업  |
-| `Dispatcher.Main` :  | 안드로이드의 경우 UI 스레드 |
+| `Dispatcher.Main`  | 안드로이드의 경우 UI 스레드 |
 
 ### launch
 
@@ -61,7 +66,7 @@
 
 
 
-## 예제 - 
+## 예제 -
 
 ```kotlin
 val scope = CoroutineScope(Dispatchers.Main)
@@ -80,7 +85,7 @@ val scope = CoroutineScope(Dispatchers.Main)
 
     scope.launch(Dispatchers.Default) {
         // 기존 CoroutineScope 는 유지하되, 작업만 백그라운드로 처리
-    }	
+    }
 ```
 
 
@@ -160,4 +165,3 @@ class LoginViewModel(
 > <br>
 >
 > https://blog.naver.com/mym0404/221603580011<br>
-
