@@ -5,6 +5,7 @@
 
 ## Java
 - [Java-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/Java/Java-Thread.md)
+- [RxJava](https://github.com/4z7l/Today-I-Learned/blob/master/Java/RxJava.md)
 
 
 ## Kotlin
