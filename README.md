@@ -12,7 +12,10 @@
 
 ## Java
 - [Java-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/Java/Java-Thread.md)
-- [RxJava](https://github.com/4z7l/Today-I-Learned/blob/master/Java/RxJava.md)
+
+## RxJava
+- [RxJava-1](/RxJava/RxJava_1.md)
+- [RxJava subscribeOn과 observeOn의 차이](/Java/RxJava_subscribeOn_observeOn.md)
 
 ## Kotlin
 - [Kotlin](https://github.com/4z7l/Today-I-Learned/blob/master/Kotlin/kotlin.md)
