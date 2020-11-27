@@ -15,6 +15,7 @@
 
 ## RxJava
 - [RxJava-1](/RxJava/RxJava_1.md)
+- [RxJava-2](/RxJava/RxJava_2.md)
 - [RxJava subscribeOn과 observeOn의 차이](/Java/RxJava_subscribeOn_observeOn.md)
 
 ## Kotlin
