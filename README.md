@@ -1,30 +1,30 @@
 # Today-I-Learned
 
 ## Git
-- [My Git Commit Message Convention](https://github.com/4z7l/Today-I-Learned/blob/master/Git/GitCommitConvention.md)
+- [My Git Commit Message Convention](/Git/GitCommitConvention.md)
 
 ## Architecture Pattern
 - [MVP](/Architecture_Pattern/MVP.md)
 - [MVVM](/Architecture_Pattern/MVVM.md)
 
 ## Design Pattern
-- [Repository Pattern](/Design_Pattern/Repository_Pattern.md)
+- [Repository Pattern](/Design_Pattern/Repository_Pattern.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/11/24/repository-pattern.html)
 
 ## Java
-- [Java-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/Java/Java-Thread.md)
+- [Java-Thread](/Java/Java-Thread.md)
 
 ## RxJava
-- [RxJava-1](/RxJava/RxJava_1.md)
-- [RxJava-2](/RxJava/RxJava_2.md)
-- [RxJava subscribeOn과 observeOn의 차이](/Java/RxJava_subscribeOn_observeOn.md)
+- [RxJava-1](/RxJava/RxJava_1.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/12/01/rxjava-1.html)
+- [RxJava-2](/RxJava/RxJava_2.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/12/03/rxjava-2.html)
+- [RxJava subscribeOn과 observeOn의 차이](/RxJava/RxJava_subscribeOn_observeOn.md)
 
 ## Kotlin
-- [Kotlin](https://github.com/4z7l/Today-I-Learned/blob/master/Kotlin/kotlin.md)
-- [Kotlin Delegates](https://github.com/4z7l/Today-I-Learned/blob/master/Kotlin/kotlin-by.md)
+- [Kotlin](/Kotlin/kotlin.md)
+- [Kotlin Delegates](/Kotlin/kotlin-by.md)
 
 ## Android
-- [Coroutine](https://github.com/4z7l/Today-I-Learned/blob/master/Android/Coroutine.md)
-- [Retrofit2](https://github.com/4z7l/Today-I-Learned/blob/master/Android/Retrofit2.md)
-- [Rx](https://github.com/4z7l/Today-I-Learned/blob/master/Android/Rx.md)
-- [DI](https://github.com/4z7l/Today-I-Learned/blob/master/Android/di.md)
-- [Android-Thread](https://github.com/4z7l/Today-I-Learned/blob/master/Android/thread.md)
+- [Coroutine](/Android/Coroutine.md)
+- [Retrofit2](/Android/Retrofit2.md)
+- [Rx](/Android/Rx.md)
+- [DI](/Android/di.md)
+- [Android-Thread](/Android/thread.md)
