@@ -8,6 +8,7 @@
 - [MVVM](/Architecture_Pattern/MVVM.md)
 
 ## Design Pattern
+- [애플리케이션 설계와 SOLID 법칙](/Design_Pattern/SOLID.md)
 - [Repository Pattern](/Design_Pattern/Repository_Pattern.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/11/24/repository-pattern.html)
 
 ## Java
