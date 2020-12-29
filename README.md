@@ -28,6 +28,7 @@
 ## Kotlin
 - [Kotlin](/Kotlin/kotlin.md)
 - [Kotlin Delegates](/Kotlin/kotlin-by.md)
+- [Kotlin Constructor](/Kotlin/kotlin-constructor.md)
 
 ## Android
 - [Coroutine](/Android/Coroutine.md)
