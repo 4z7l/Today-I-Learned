@@ -2,6 +2,7 @@
 
 ## Git
 - [My Git Commit Message Convention](/Git/GitCommitConvention.md)
+- [My Android Coding Convention](/Git/AndroidCodingConvention.md)
 
 ## Architecture Pattern
 - [MVP](/Architecture_Pattern/MVP.md)
