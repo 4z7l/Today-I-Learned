@@ -1,30 +1,36 @@
 # Today-I-Learned
 
 <br>
+
 ## CS
 - [Memory](/CS/memory.md)
 - [Stack Frame](/CS/stack_frame.md)
 
 <br>
+
 ## Git
 - [My Git Commit Message Convention](/Git/GitCommitConvention.md)
 - [My Android Coding Convention](/Git/AndroidCodingConvention.md)
 
 <br>
+
 ## Architecture Pattern
 - [MVP](/Architecture_Pattern/MVP.md)
 - [MVVM](/Architecture_Pattern/MVVM.md)
 
 <br>
+
 ## Design Pattern
 - [애플리케이션 설계와 SOLID 법칙](/Design_Pattern/SOLID.md)
 - [Repository Pattern](/Design_Pattern/Repository_Pattern.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/11/24/repository-pattern.html)
 
 <br>
+
 ## Java
 - [Java-Thread](/Java/Java-Thread.md)
 
 <br>
+
 ## RxJava
 - [1. Reactive Programming](/RxJava/RxJava_1_reactive_programming.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/12/01/rxjava-1.html)
 - [2. Observable](/RxJava/RxJava_2_observable.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/12/03/rxjava-2.html)
@@ -36,12 +42,14 @@
 - [backpressure와 Flowable](/RxJava/RxJava_backpressure_flowable.md)
 
 <br>
+
 ## Kotlin
 - [Kotlin](/Kotlin/kotlin.md)
 - [Kotlin Delegates](/Kotlin/kotlin-by.md)
 - [Kotlin Constructor](/Kotlin/kotlin-constructor.md)
 
 <br>
+
 ## Android
 - [Coroutine](/Android/Coroutine.md)
 - [Retrofit2](/Android/Retrofit2.md)
