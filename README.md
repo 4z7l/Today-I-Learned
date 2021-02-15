@@ -2,15 +2,15 @@
 
 <br>
 
-## CS
-- [Memory](/CS/memory.md)
-- [Stack Frame](/CS/stack_frame.md)
+## Algorithm
+- [시간복잡도](/Algorithm/algorithm1.md)
 
-<br>
-
-## Git
-- [My Git Commit Message Convention](/Git/GitCommitConvention.md)
-- [My Android Coding Convention](/Git/AndroidCodingConvention.md)
+## Android
+- [Coroutine](/Android/Coroutine.md)
+- [Retrofit2](/Android/Retrofit2.md)
+- [Rx](/Android/Rx.md)
+- [DI](/Android/di.md)
+- [Android-Thread](/Android/thread.md)
 
 <br>
 
@@ -20,14 +20,33 @@
 
 <br>
 
+## CS
+- [Memory](/CS/memory.md)
+- [Stack Frame](/CS/stack_frame.md)
+
+<br>
+
 ## Design Pattern
 - [애플리케이션 설계와 SOLID 법칙](/Design_Pattern/SOLID.md)
 - [Repository Pattern](/Design_Pattern/Repository_Pattern.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/11/24/repository-pattern.html)
+<br>
+
+## Git
+- [My Git Commit Message Convention](/Git/GitCommitConvention.md)
+- [My Android Coding Convention](/Git/AndroidCodingConvention.md)
+
 
 <br>
 
 ## Java
 - [Java-Thread](/Java/Java-Thread.md)
+
+<br>
+
+## Kotlin
+- [Kotlin](/Kotlin/kotlin.md)
+- [Kotlin Delegates](/Kotlin/kotlin-by.md)
+- [Kotlin Constructor](/Kotlin/kotlin-constructor.md)
 
 <br>
 
@@ -40,22 +59,6 @@
 - [Hot Observable, Cold Observable](/RxJava/RxJava_hot_cold.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/12/08/rxjava-4.html)
 - [subscribeOn과 observeOn의 차이](/RxJava/RxJava_subscribeOn_observeOn.md)
 - [backpressure와 Flowable](/RxJava/RxJava_backpressure_flowable.md)
-
-<br>
-
-## Kotlin
-- [Kotlin](/Kotlin/kotlin.md)
-- [Kotlin Delegates](/Kotlin/kotlin-by.md)
-- [Kotlin Constructor](/Kotlin/kotlin-constructor.md)
-
-<br>
-
-## Android
-- [Coroutine](/Android/Coroutine.md)
-- [Retrofit2](/Android/Retrofit2.md)
-- [Rx](/Android/Rx.md)
-- [DI](/Android/di.md)
-- [Android-Thread](/Android/thread.md)
 
 <!--
 - []()
