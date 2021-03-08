@@ -5,18 +5,14 @@
 ## Algorithm
 - [시간복잡도](/Algorithm/algorithm1.md)
 
+<br>
+
 ## Android
 - [Coroutine](/Android/Coroutine.md)
 - [Retrofit2](/Android/Retrofit2.md)
 - [Rx](/Android/Rx.md)
 - [DI](/Android/di.md)
 - [Android-Thread](/Android/thread.md)
-
-<br>
-
-## Architecture Pattern
-- [MVP](/Architecture_Pattern/MVP.md)
-- [MVVM](/Architecture_Pattern/MVVM.md)
 
 <br>
 
@@ -29,6 +25,8 @@
 ## Design Pattern
 - [애플리케이션 설계와 SOLID 법칙](/Design_Pattern/SOLID.md)
 - [Repository Pattern](/Design_Pattern/Repository_Pattern.md) :arrow_forward: [BLOG](https://4z7l.github.io/2020/11/24/repository-pattern.html)
+- [MVC_MVP_MVVM 비교](/Design_Pattern/MVC_MVP_MVVM.md)
+
 <br>
 
 ## Git
