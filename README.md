@@ -32,6 +32,7 @@
 ## Git
 - [My Git Commit Message Convention](/Git/GitCommitConvention.md)
 - [My Android Coding Convention](/Git/AndroidCodingConvention.md)
+- [Reset & Revert](/Git/reset_revert.md)
 
 
 <br>
