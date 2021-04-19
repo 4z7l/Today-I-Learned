@@ -59,3 +59,32 @@ CPU 스케줄링 알고리즘
 
 - 프로세스가 다른 큐로 이동 가능
 - Aging과 같은 방식으로 구현 가능
+
+
+
+<br>
+
+## Multiple-Processor Scheduling
+
+- Homogenoues processor : Queue에 한 줄로 세워서 각 프로세서가 알아서 꺼내감
+- Load Sharing : 일부 프로세서에 job이 몰리지 않도록 부하를 적절히 공유함 (별개의 큐 / 공동 큐)
+- Symmetric Multiprocessing(SMP) : 각 프로세서가 각자 알아서 스케줄링 결정
+- Asymmetric Multiprocessing : 하나의 프로세서가 시스템 데이터의 접근과 공유를 책임지고 나머지 프로세서는 거기에 따름
+
+
+
+<br>
+
+## Real-Time Scheduling
+
+- Hard Realtime : 정해진 시간 안에 반드시 끝내도록 
+- Soft Realtime : 일반 프로세스에 비해 높은 priority를 갖도록 해야 함
+
+
+
+<br>
+
+## Thread Scheduling
+
+- Local Scheduling : 사용자 수준의 Thread Library에 의해 어떤 스레드를 스케줄할지 결정
+- Global Scheduling : Kernel level으로 커널의 단기 스케줄러가 어떤 스레드를 스케줄할지 결정
