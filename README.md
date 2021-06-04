@@ -61,6 +61,7 @@
 ## Network
 
 - [01 네트워크란 무엇인가?](./Network/01.md)
+- [02 네트워크 모델](./Network/02.md)
 
 <br>
 
