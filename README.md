@@ -65,6 +65,7 @@
 - [03 2계층](./Network/03.md)
 - [04 3계층](./Network/04.md)
 - [05 ARP 프로토콜](./Network/05.md)
+- [06 IP 프로토콜](./Network/06.md)
 
 
 
